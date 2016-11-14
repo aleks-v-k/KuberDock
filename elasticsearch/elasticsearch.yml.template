@@ -1,5 +1,5 @@
 cluster.name: kuberdock
-cluster.routing.allocation.disk.threshold_enabled: True
+cluster.routing.allocation.disk.threshold_enabled: true
 cluster.routing.allocation.disk.watermark.low: 1gb
 cluster.routing.allocation.disk.watermark.high: 500mb
 http.cors.allow-origin: "/.*/"

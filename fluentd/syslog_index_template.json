@@ -8,19 +8,19 @@
                     "type": "date"
                 },
                 "host": {
-                    "type": "string", "index": "not_analyzed"
+                    "type": "keyword"
                 },
                 "host_md5": {
-                    "type": "string", "index": "not_analyzed"
+                    "type": "keyword"
                 },
                 "time_nano": {
                     "type": "long", "coerce": true
                 },
                 "ident":{
-                    "type":"string", "index": "not_analyzed"
+                    "type":"keyword"
                 },
                 "message":{
-                    "type":"string", "index": "no"
+                    "type": "keyword", "index": false
                 }
             }
         }

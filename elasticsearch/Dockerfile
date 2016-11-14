@@ -1,6 +1,6 @@
 FROM java:8-jre
 
-ENV ES_PKG_NAME elasticsearch-2.2.0
+ENV ES_PKG_NAME elasticsearch-5.0.0
 
 # explicitly set user/group IDs
 RUN groupadd -r elasticsearch --gid=888 && useradd -r -g elasticsearch --uid=888 elasticsearch
@@ -19,7 +19,7 @@ RUN apt-get update && apt-get -y install python3-requests
 
 RUN \
   cd / && \
-  wget https://download.elasticsearch.org/elasticsearch/elasticsearch/$ES_PKG_NAME.tar.gz && \
+  wget https://artifacts.elastic.co/downloads/elasticsearch/$ES_PKG_NAME.tar.gz && \
   tar xvzf $ES_PKG_NAME.tar.gz && \
   rm -f $ES_PKG_NAME.tar.gz && \
   mv /$ES_PKG_NAME /elasticsearch
